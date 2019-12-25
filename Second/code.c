@@ -2,7 +2,7 @@
 This program was created by the
 CodeWizardAVR V3.12 Advanced
 Automatic Program Generator
-© Copyright 1998-2014 Pavel Haiduc, HP InfoTech s.r.l.
+Â© Copyright 1998-2014 Pavel Haiduc, HP InfoTech s.r.l.
 http://www.hpinfotech.com
 
 Project : 
@@ -60,7 +60,7 @@ TCNT0=0x83;
 // Place your code here
     if (en){ 
         count++;
-        if (count == 10){
+        if (count == 1000){
             count = 0;
             sec++;
             lcd_clear();
