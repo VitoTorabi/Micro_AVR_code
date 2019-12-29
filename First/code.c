@@ -239,7 +239,9 @@ void show_binary(int n){
     for(i=0; i<7;i++)
         str[i] = '\0';
      
-    i = 0; 
+    if(n==0)str[0]='0';
+    i = 0;
+    if(n<0)n=-n; 
     while (n > 0) { 
         binaryNum[i] = n % 2; 
         n = n / 2; 
@@ -252,7 +254,7 @@ void show_binary(int n){
             str[k] = '0';
         k++;
     }
-    sprintf(out,"binary : %s", str);
+    sprintf(out,"|binary|: %s", str);
     lcd_clear();
     lcd_puts(out); 
 }
