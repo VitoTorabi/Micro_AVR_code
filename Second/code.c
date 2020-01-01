@@ -48,8 +48,8 @@ interrupt [EXT_INT0] void ext_int0_isr(void)
 interrupt [EXT_INT1] void ext_int1_isr(void)
 {
 // Place your code here
-    m = PINA;
-    h = PINB;
+    m = PINB;
+    sec = PINA;
 }
 
 // Timer 0 overflow interrupt service routine
@@ -60,29 +60,30 @@ TCNT0=0x83;
 // Place your code here
     if (en){ 
         count++;
-        if (count == 1000){
+        if (count > 999){
             count = 0;
-            sec++;
             lcd_clear();
-            sprintf(str,"%d : %d", h, m);
-            lcd_puts(str);            
+            sprintf(str,"%d : %d", m, sec);
+            lcd_puts(str);
+            if(sec == 0 && m == 0)
+                PORTD = 0b00000000;
+            else 
+                PORTD = 0b00000001;
+            sec++;          
         }
-        if (sec == 60){
+        if (sec > 59){
             sec = 0;
             m++;
+            
         }
         if(m > 59){
             m = 0;
             h++;
         }
-        if(h>23){
-            h=0;
-        }
-        if(h == 0 && m == 0)
-            PORTD = 0b00000000;
-        else 
-            PORTD = 0b00000001;
-    } 
+        
+        
+    }
+     
 }
 
 void main(void)
@@ -211,8 +212,11 @@ lcd_init(8);
 
 // Global enable interrupts
 #asm("sei")
-m = PINA;
-h = PINB;
+m = PINB;
+sec = PINA;
+sprintf(str,"%d : %d", m, sec);
+lcd_clear();
+lcd_puts(str);
 while (1)
       {
       // Place your code here
