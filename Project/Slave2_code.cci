@@ -1,0 +1,12 @@
+VERSION:3 SOURCE_TIMESTAMP:503A1E57
+NODE:I LEVEL:0 LINE:24 "C:\cvavr\inc\mega32.h"
+NODE:I LEVEL:0 LINE:27 "C:\cvavr\inc\alcd.h"
+NODE:V LEVEL:0 LINE:31 "ac_result -> R4,R5"
+NODE:V LEVEL:0 LINE:32 "str -> RAM:????"
+NODE:V LEVEL:0 LINE:33 "data -> R6,R7"
+NODE:V LEVEL:0 LINE:34 "flag -> R8,R9"
+NODE:F LEVEL:0 LINE:37 "ext_int0_isr(void)"
+NODE:I LEVEL:0 LINE:43 "C:\cvavr\inc\stdio.h"
+NODE:F LEVEL:0 LINE:46 "ana_comp_isr(void)"
+NODE:F LEVEL:0 LINE:51 "main(void)"
+NODE:F LEVEL:0 LINE:74 "init(void)"

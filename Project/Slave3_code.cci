@@ -1,0 +1,13 @@
+VERSION:3 SOURCE_TIMESTAMP:503A0B00
+NODE:I LEVEL:0 LINE:24 "C:\cvavr\inc\mega32.h"
+NODE:I LEVEL:0 LINE:26 "C:\cvavr\inc\delay.h"
+NODE:I LEVEL:0 LINE:29 "C:\cvavr\inc\alcd.h"
+NODE:V LEVEL:0 LINE:33 "flag -> R4,R5"
+NODE:V LEVEL:0 LINE:34 "data -> R6,R7"
+NODE:V LEVEL:0 LINE:35 "t -> R8,R9"
+NODE:F LEVEL:0 LINE:39 "ext_int0_isr(void)"
+NODE:I LEVEL:0 LINE:45 "C:\cvavr\inc\stdio.h"
+NODE:M LEVEL:0 LINE:48 "ADC_VREF_TYPE"
+NODE:F LEVEL:0 LINE:51 "read_adc(unsigned char adc_input)"
+NODE:F LEVEL:0 LINE:64 "main(void)"
+NODE:F LEVEL:0 LINE:88 "init(void)"
